@@ -19,8 +19,8 @@ public class GoodsController {
         this.goodsService = goodsService;
     }
     @GetMapping("/add")
-    public List<List<Integer>> addGoods (@RequestParam Integer id) {
-        return goodsService.addGoods(Collections.singletonList(id));
+    public List<List<Integer>> addGoods (@RequestParam List<Integer> id) {
+        return goodsService.addGoods(id);
     }
     @GetMapping("/get")
     public List<Integer> getGoods(){
